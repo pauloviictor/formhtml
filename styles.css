@@ -1,0 +1,144 @@
+body{
+    height:100vh;
+    background: no-repeat rgb(25,106,142);
+    background-attachment: fixed;
+}
+h1 {
+    margin: 25px; 
+    text-align: center;
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+.forms{
+    margin: 25px auto;
+    width: 70%;
+}
+
+fieldset{
+    background-color: #fff;
+    border-radius: 6px;
+    border: none;
+    padding: 15px;
+    margin: 15px;
+}
+
+.forms .dados,
+.forms .contatos{ 
+    text-align: center;
+    margin: 10px;
+    font-size: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #000;
+}
+
+.forms .dados-pessoais,
+.forms .localizacao,
+.forms .endereco,
+.forms .contato,
+.forms .contatos-child { 
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0px auto 10px auto;
+}
+
+.forms .dados-pessoais input{
+    margin: 0px auto 10px auto; 
+    border-radius: 6px; 
+    padding: 5px; 
+    width: calc(100% - 30px);
+    height: 30px;
+    border: none;
+    background-color: #ccc;
+}
+
+.forms .localizacao input,
+.forms .endereco input,
+.forms .contato input,
+.forms .contatos-child input { 
+    margin: 0px 0px 5px 5px; 
+    border-radius: 6px; 
+    padding: 5px; 
+    width: calc(50% - 22px);
+    height: 30px;
+    border: none;
+    background-color: #ccc;
+}
+
+.forms .dados-pessoais select { 
+    margin-bottom: 10px; 
+    border-radius: 6px; 
+    padding: 5px; 
+    width: calc(50% - 8px);
+    height: 40px;
+    background-color: #ccc;
+    border: none;
+}
+
+.btn{
+    text-align: center;
+
+}
+
+.forms .btn .btn-contato{
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.forms .btn .btn-save{
+    width: 100px;
+    height: 40px;
+    background-color: #5D9915;
+    font-size: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.form-dados{
+    width: 70vw;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-dados .view-dados{
+    background-color: #fff;
+    border-radius: 6px;
+    width: 70vw;
+}
+
+.form-dados .view-dados table {
+    width: 60vw;
+    margin: auto;
+}
+
+.form-dados .view-dados th{
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.form-dados .view-dados td {
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.form-dados .view-dados .icon-cell {
+    width: 30px;
+}
+
+.form-dados .view-dados a{
+    color: black;
+    font-size: 16px;
+}
+
+.form-dados .view-dados a:hover{
+    color: red;
+    cursor: pointer;
+}

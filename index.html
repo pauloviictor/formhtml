@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Formulário Desafio</title>
+  <meta charset="utf-8">
+  <script src="https://kit.fontawesome.com/dd08af23b3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./styles.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="jquery.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+  <header>
+    <h1>Formulário Desafio</h1>
+  </header>
+
+  <div class="forms">
+    <form action="" method="post" id="formulario">
+      <fieldset>
+        <div class="dados">
+          <i class="fa-solid fa-address-card"></i> <label>Dados Pessoais</label>
+        </div>
+        <hr>
+        <div class="dados-pessoais">
+          <input hidden id="identificador" value="">
+          <input required type="text" name="name" placeholder="Insira seu Nome Completo" id="nome"
+            onblur="validaNome()">
+          <input required type="text" name="email" placeholder="Insira seu E-mail" id="email" onblur="validaEmail()" onkeypress="this.value = this.value.trim()">
+          <input required type="text" name="cpf" placeholder="Digite seu CPF" id="cpf" onblur="mascaraCpf()" maxlength="11">
+          <select name="schooling" id="schooling">
+            <option selected disabled value="">Escolaridade</option>
+            <option value="fundamental">Fundamental</option>
+            <option value="medio">Médio</option>
+            <option value="superior">Superior</option>
+          </select>
+        </div>
+        <div class="localizacao">
+          <input type="text" name="city" placeholder="Insira sua Cidade" id="city">
+          <input type="text" name="uf" placeholder="UF" id="uf">
+        </div>
+
+        <div class="endereco">
+          <input type="text" name="adress" placeholder="Logradouro" id="street">
+          <input type="text" name="adress-comp" placeholder="Complemento" id="complement">
+        </div>
+      </fieldset>
+      <fieldset id="contatos-field">
+        <div class="contatos">
+          <i class="fa-solid fa-phone"></i> <label>Contatos Alternativos</label>
+        </div>
+        <hr>
+        <div class="contato" id="contato0">
+          <input type="text" name="name" placeholder="Insira o Nome do Contato" id="nomeContato0">
+          <input type="tel" name="tellContato1" placeholder="Insira o telefone do contato" id="telefoneContato0" class="tell">
+          <input type="email" name="email" placeholder="Insira o E-mail alternativo" id="emailContato0">
+        </div>
+        <div class="contato-child" id="contato-alternativo">
+        </div>
+        <div class="btn">
+          <button class="btn-contato" type="button" onclick="adicionaContato()">
+            <i class="fa-solid fa-plus"></i>
+            Adicionar Contato
+          </button>
+        </div>
+      </fieldset>
+      <br>
+      <div class="btn">
+        <button type="submit" class="btn-save" id="btn-save">Submit</button>
+      </div>
+    </form>
+    &nbsp;
+    &nbsp;
+  </div>
+
+  <div class="form-dados">
+    <div class="view-dados">
+      <table id="cadastros-table">
+      </table>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
